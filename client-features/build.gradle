@@ -1,0 +1,19 @@
+ext {
+    ktor_version="0.9.5"
+    kotlin_version = "1.2.71"
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.71"
+    implementation "io.ktor:ktor-client-core:$ktor_version"
+    implementation "io.ktor:ktor-client-apache:$ktor_version"
+    implementation "io.ktor:ktor-client-json:$ktor_version"
+    implementation "io.ktor:ktor-client-jackson:$ktor_version"
+    implementation "io.ktor:ktor-auth-jwt:$ktor_version"
+    
+    testImplementation "io.ktor:ktor-client-mock:$ktor_version"
+    testImplementation project(":test-tools")
+    testImplementation "io.mockk:mockk:1.8.9"
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.3.1'
+
+}
